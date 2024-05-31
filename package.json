@@ -1,0 +1,20 @@
+{
+  "name": "home_work_20",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel Task/sours/js -d Task/dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.24.6",
+    "@babel/core": "^7.24.6",
+    "@babel/preset-env": "^7.24.6",
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1"
+  },
+  "keywords": [],
+  "description": ""
+}

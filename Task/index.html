@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+    <section class="vh-100" style="background-color: #e2d5de;">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-xl-10">
+      
+              <div class="card" style="border-radius: 15px;">
+                <div class="card-body p-5">
+      
+                  <h6 class="mb-3">Cписок завдань</h6>
+      
+                  <form class="d-flex justify-content-center align-items-center mb-4">
+                    <div data-mdb-input-init class="form-outline flex-fill">
+                      <input type="text" id="form3" class="form-control form-control-lg" />
+                      <label class="form-label" for="form3">Що тобі потрібно зробити сьогодні?</label>
+                    </div>
+                    <button id="button-submit" type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg ms-2">Add</button>
+                  </form>
+      
+                  <ul class="list-group mb-0" id="list-group">
+                        <!-- content -->
+                  </ul>
+                </div>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" tabindex="-1" id="modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Ваше завдання</h5>
+                </div>
+                <!-- <div class="modal-body" id="modal-body">
+                </div> -->
+                <input class="modal-body" id="modal-body" type="text">
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="modal-window-hide-button">Закрыть</button>
+                  <button type="button" class="btn btn-primary" id="save-changes-button">Сохранить изменения</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+    
+      <script src="./sours/js/main.js"></script>
+</body>
+</html>
