@@ -4,10 +4,16 @@
   "description": "Це простий додаток для відстеження погоди, створений за допомогою HTML, CSS (Bootstrap) та JavaScript (jQuery). Додаток дозволяє користувачам створювати список справ, де вони можуть додавати та видаляти завдання.",
   "main": "index.js",
   "scripts": {
+    "build": "babel sours -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.24.6",
+    "@babel/core": "^7.24.6",
+    "@babel/preset-env": "^7.24.6"
+  },
   "dependencies": {
     "bootstrap": "^5.3.3",
     "jquery": "^3.7.1"

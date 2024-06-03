@@ -53,7 +53,7 @@ $(document).ready(function() {
     }
     
     function saveTaskToLocalStorage(text, id){
-        let tasks = JSON.parse(localStorage.getItem(LOCAL_STORAGE_TASKS)) || [];
+        const tasks = JSON.parse(localStorage.getItem(LOCAL_STORAGE_TASKS)) || [];
         tasks.push({ id: id, text: text });
         localStorage.setItem(LOCAL_STORAGE_TASKS, JSON.stringify(tasks));
     }
@@ -106,7 +106,7 @@ $(document).ready(function() {
         const IDelement = $('#modal').attr('saveID');
         const savingNewValue = $('#modal-body').val();
 
-        let tasks = JSON.parse(localStorage.getItem(LOCAL_STORAGE_TASKS)) || [];
+        const tasks = JSON.parse(localStorage.getItem(LOCAL_STORAGE_TASKS)) || [];
         tasks = tasks.map(task => {
             if (task.id === Number(IDelement)){
                 task.text = savingNewValue;
@@ -125,14 +125,14 @@ $(document).ready(function() {
     });
      
     function updateTasksLocalStorage(removeID) {
-        let tasks = JSON.parse(localStorage.getItem(LOCAL_STORAGE_TASKS)) || [];
-        upTasks = tasks.filter(task =>task.id !== Number(removeID));
+        const tasks = JSON.parse(localStorage.getItem(LOCAL_STORAGE_TASKS)) || [];
+        const upTasks = tasks.filter(task =>task.id !== Number(removeID));
         localStorage.setItem(LOCAL_STORAGE_TASKS, JSON.stringify(upTasks));
         taskNumberArray = taskNumberArray.filter(number => number !== Number(removeID));
     }
     
     function loadTasksFromLocalStorage(){ 
-        let tasks = JSON.parse(localStorage.getItem(LOCAL_STORAGE_TASKS)) || [];
+        const tasks = JSON.parse(localStorage.getItem(LOCAL_STORAGE_TASKS)) || [];
         tasks.forEach(loadedTask => {
             createNewTask(loadedTask.text, loadedTask.id);
             taskNumberArray.push(loadedTask.id);
